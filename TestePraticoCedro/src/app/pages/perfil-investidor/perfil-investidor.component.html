@@ -1,1 +1,150 @@
-<p>perfil-investidor works!</p>
+<div class="container">
+    <form class="text-center" [formGroup]="investorForm">
+
+        <h1 class="title">PERFIL DO INVESTIDOR - QUESTIONÁRIO</h1>
+
+        <div class="form-group">
+            <h2>1 - Qual o seu comportamento em relação aos seus investimentos?</h2>
+            <mat-radio-group aria-label="Selecione uma opção" formControlName="comportamento">
+                <div class="row">
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="1"><span class="wrap-radio">PRESERVAR MEU DINHEIRO SEM CORRER RISCOS</span></mat-radio-button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="2"><span class="wrap-radio">GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS MODERADOS</span></mat-radio-button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="3"><span class="wrap-radio">GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS AGRESSIVOS</span></mat-radio-button>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </mat-radio-group>
+        </div>
+        <div class="middle-line"></div>
+        <div class="form-group">
+            <h2>2 - Por quanto tempo você deseja manter os seus investimentos?</h2>
+            <mat-radio-group aria-label="Selecione uma opção" formControlName="tempo">
+                <div class="row">
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="1"><span class="wrap-radio">ATÉ 1 ANO</span></mat-radio-button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="2"><span class="wrap-radio">DE 1 A 3 ANOS</span></mat-radio-button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="3"><span class="wrap-radio">MAIS DE 3 ANOS</span></mat-radio-button>
+                        </div>
+
+                    </div>
+                </div>
+            </mat-radio-group>
+        </div>
+        <div class="middle-line"></div>
+
+        <div class="form-group">
+            <h2>3 - Quantos % desses investimentos você pode precisar em um ano?</h2>
+            <mat-radio-group aria-label="Selecione uma opção" formControlName="porcentagem">
+                <div class="row">
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="1"><span class="wrap-radio">ACIMA DE 75%</span></mat-radio-button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="2"><span class="wrap-radio">DE 26% A 74%</span></mat-radio-button>
+                        </div>
+                    </div>
+                    <div class="col-md-12 col-xl-4">
+                        <div>
+                            <mat-radio-button value="3"><span class="wrap-radio">ATÉ 25%</span></mat-radio-button>
+                        </div>
+
+                    </div>
+                </div>
+            </mat-radio-group>
+        </div>
+        <div class="middle-line"></div>
+        <h2>4 - Qual sua familiaridade com os tipos de investimentos abaixo?<br> Leve em consideração o valor aplicado nos ultimos 2 anos.</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <p>TÍTULOS DE RENDA FIXA OU TESOURO DIRETO</p>
+                    <mat-form-field>
+                        <mat-label>Selecione uma opção</mat-label>
+                        <mat-select formControlName="renda_fixa">
+                            <mat-option *ngFor="let fam of familiaridades; let i = index" [value]="i">
+                                {{fam}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <p>FUNDOS DE INVESTIMENTO</p>
+                    <mat-form-field>
+                        <mat-label>Selecione uma opção</mat-label>
+                        <mat-select formControlName="fundos">
+                            <mat-option *ngFor="let fam of familiaridades; let i = index" [value]="i">
+                                {{fam}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <p>AÇÕES À VISTA</p>
+                    <mat-form-field>
+                        <mat-label>Selecione uma opção</mat-label>
+                        <mat-select formControlName="acoes_vista">
+                            <mat-option *ngFor="let fam of familiaridades; let i = index" [value]="i">
+                                {{fam}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <p>ALUGUEL DE AÇÕES, TERMOS, OPÇÕES E FUTUROS</p>
+                    <mat-form-field>
+                        <mat-label>Selecione uma opção</mat-label>
+                        <mat-select formControlName="acoes_aluguel">
+                            <mat-option *ngFor="let fam of familiaridades; let i = index" [value]="i">
+                                {{fam}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <button mat-button class="btn bt-b" routerLink="/home" routerLinkActive="active">VOLTAR</button>
+        <button mat-button class="btn bt-s" [disabled]="!investorForm.valid" (click)="onSubmit()">SALVAR</button>
+    </form>
+</div>

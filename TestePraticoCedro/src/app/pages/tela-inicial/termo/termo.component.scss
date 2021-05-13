@@ -18,7 +18,7 @@
 }
 
 .mat-button.mat-button-disabled.mat-button-disabled {
-    background-color: rgb(233, 183, 47);
+    background-color: var(--tertiary-color);
     color: white;
 }
 

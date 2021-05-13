@@ -6,11 +6,17 @@
 @import '~bootstrap/scss/bootstrap';
 $primary-color: #7d6d6c;
 $secondary-color: #7e082b;
+$tertiary-color: rgb(233, 183, 47);
 $beige: #c0c24c;
 :root {
     --primary-color: #{$primary-color};
     --secondary-color: #{$secondary-color};
+    --tertiary-color: #{$tertiary-color};
     --beige: #{$beige};
+}
+
+* {
+    font-family: Poppins;
 }
 
 html,
@@ -18,9 +24,26 @@ body {
     height: 100%;
 }
 
+.container {
+    padding: 3rem 0rem;
+    padding-left: clamp(0px, 5rem, 200px);
+    padding-right: clamp(0px, 5rem, 200px);
+    /* padding: 5rem; */
+}
+
+.title {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.middle-line {
+    border-top: 2px dashed rgb(160, 158, 158);
+    margin: 1em 0em;
+}
+
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-family: Poppins, Roboto, "Helvetica Neue", sans-serif;
 }
 
 .termo .mat-dialog-container {
@@ -30,6 +53,16 @@ body {
     height: 20rem;
 }
 
-.middle-line {
-    border-top: 2px dashed rgb(160, 158, 158);
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+    /* opacity: 0 !important; */
+    background-color: var(--secondary-color) !important;
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+    background-color: var(--secondary-color) !important;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+    /* opacity: 0 !important; */
+    border-color: var(--secondary-color) !important;
 }

@@ -23,7 +23,7 @@ export class TelaInicialComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.openDialog();
+    /* this.openDialog(); */
   }
 
 }
