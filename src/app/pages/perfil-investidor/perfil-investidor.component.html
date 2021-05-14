@@ -1,0 +1,60 @@
+<div class="container py-5 text-center">
+    <h4 class="mb-5">PERFIL DO INVESTIDOR - QUESTIONÁRIO</h4>
+
+    <div class="d-flex justify-content-center align-items-center">
+        <mat-spinner diameter="50" *ngIf="isLoading"></mat-spinner>
+    </div>
+
+
+    <ng-container *ngIf="!isLoading">
+        <form [formGroup]="investorForm">
+            <ng-container *ngFor="let r of formResponse?.radios; let i=index">
+                <div class="form-group">
+                    <h5 class="mb-4">{{i+1}} - {{r.title}}</h5>
+                    <mat-radio-group aria-label="Selecione uma opção" [formControlName]="r.id">
+                        <div class="row">
+                            <div class="col-md-12 col-xl-4" *ngFor="let a of r.answers; let j=index">
+                                <div>
+                                    <mat-radio-button [ngStyle]="{'color': investorForm.get(r.id).value == a ? 'var(--secondary-color)' : 'var(--primary-color)'}" [value]="a"><span class="wrap-radio">{{a}}</span></mat-radio-button>
+                                </div>
+                            </div>
+                        </div>
+                    </mat-radio-group>
+                </div>
+                <div class="middle-line"></div>
+            </ng-container>
+
+            <h5>4 - Qual sua familiaridade com os tipos de investimentos abaixo?<br> Leve em consideração o valor aplicado nos ultimos 2 anos.</h5>
+
+            <div class="row my-5">
+                <ng-container *ngFor="let s of formResponse?.selects; let i=index;">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="form-group">
+                            <p [ngStyle]="{'color': investorForm.get(s.id).valid ? 'var(--secondary-color)' : 'var(--primary-color)'}">{{s.title}}</p>
+                            <mat-form-field>
+                                <mat-label>Selecione uma opção</mat-label>
+                                <mat-select [formControlName]="s.id">
+                                    <mat-option *ngFor="let fam of familiaridades; let i = index" [value]="fam">
+                                        {{fam}}
+                                    </mat-option>
+                                </mat-select>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+
+
+            <div class="text-end">
+                <button mat-button class="btn bt-s " [disabled]="!investorForm.valid" (click)="onSubmit()">SALVAR</button>
+                <button mat-button class="btn bt-b" routerLink="/home" routerLinkActive="active">VOLTAR</button>
+
+            </div>
+
+
+
+        </form>
+    </ng-container>
+
+
+</div>

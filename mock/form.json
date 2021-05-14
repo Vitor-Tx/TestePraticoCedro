@@ -1,0 +1,37 @@
+{
+    "radios": [{
+            "id": "comportamento",
+            "title": "Qual o seu comportamento em relação aos seus investimentos?",
+            "answers": ["PRESERVAR MEU DINHEIRO SEM CORRER RISCOS", "GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS MODERADOS", "GANHAR MAIS DINHEIRO, ASSUMINDO RISCOS AGRESSIVOS"]
+        },
+        {
+            "id": "tempo",
+            "title": "Por quanto tempo você deseja manter os seus investimentos?",
+            "answers": ["ATÉ 1 ANO", "DE 1 A 3 ANOS", "MAIS DE 3 ANOS"]
+
+        },
+        {
+            "id": "porcentagem",
+            "title": "Quantos % desses investimentos você pode precisar em um ano?",
+            "answers": ["ACIMA DE 75%", "DE 26% A 74%", "ATÉ 25%"]
+
+        }
+    ],
+    "selects": [{
+            "id": "renda_fixa",
+            "title": "TÍTULOS DE RENDA FIXA OU TESOURO DIRETO"
+        },
+        {
+            "id": "fundos",
+            "title": "FUNDOS DE INVESTIMENTO"
+        },
+        {
+            "id": "acoes_vista",
+            "title": "AÇÕES À VISTA"
+        },
+        {
+            "id": "acoes_aluguel",
+            "title": "ALUGUEL DE AÇÕES, TERMOS, OPÇÕES E FUTUROS"
+        }
+    ]
+}

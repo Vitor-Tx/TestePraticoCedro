@@ -1,0 +1,27 @@
+.title {
+    color: var(--beige);
+    font-size: 1.1em;
+    margin: 0;
+}
+
+svg {
+    width: 15em;
+    height: auto;
+}
+
+p {
+    color: var(--primary-color);
+    font-size: 1em;
+    font-weight: 400;
+}
+
+button {
+    color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    padding: 0.5rem 2rem;
+    font-size: 0.8em;
+    width: 8rem;
+    height: 2.5rem;
+    display: inline-block;
+    margin: 0.5rem;
+}

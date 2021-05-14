@@ -1,0 +1,17 @@
+<button mat-icon-button class="close-button" [mat-dialog-close]="true">
+    <mat-icon class="close-icon" color="warn">close</mat-icon>
+</button>
+
+<p class="title mt-3">
+    TERMO</p>
+<p class="terms">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type.</p>
+<div class="middle-line mb-4"></div>
+
+<section>
+    <mat-checkbox [(ngModel)]="checked">Li e aceito os termos e condições acima</mat-checkbox>
+
+</section>
+
+
+
+<button mat-button mat-dialog-close [disabled]="!checked" routerLink="/cadastro-realizado" routerLinkActive="active">OK, ENTENDI</button>

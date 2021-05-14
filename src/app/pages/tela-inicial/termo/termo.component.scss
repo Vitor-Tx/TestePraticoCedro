@@ -1,0 +1,66 @@
+.close-button {
+    float: right;
+    top: -24px;
+    right: -24px;
+}
+
+.close-icon {
+    transition: 1s ease-in-out;
+}
+
+.close-icon:hover {
+    transform: rotate(180deg);
+}
+
+ ::ng-deep .icon-outside .close-button {
+    float: right;
+    top: -52px;
+    right: -52px;
+}
+
+ ::ng-deep .icon-outside .mat-dialog-container {
+    overflow: unset
+}
+
+.title {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-left: 10%;
+}
+
+.terms {
+    font-size: 1em;
+    color: rgb(116, 111, 111);
+    font-weight: bold;
+    text-align: left;
+}
+
+section {
+    color: rgb(160, 158, 158);
+    font-weight: 500;
+    padding: 0.5em 0em 1em 0em;
+}
+
+.mat-button.mat-button-disabled.mat-button-disabled {
+    background-color: var(--tertiary-color);
+    color: white;
+}
+
+:host::ng-deep .mat-checkbox-layout .mat-checkbox-label {
+    white-space: normal !important;
+    text-align: left;
+}
+
+
+/* :host::ng-deep .mat-checkbox {
+    white-space: normal !important;
+} */
+
+.mat-button {
+    background-color: rgb(71, 211, 58);
+    color: white;
+    width: 80%;
+    height: 3rem;
+    margin: 1rem 0rem;
+}
