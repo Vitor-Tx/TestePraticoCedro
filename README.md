@@ -11,7 +11,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Development server
 
-Run `npm start json-server` to run a simulated API for the app.
+Run `npm run json-server` to run a simulated API for the app.
 
 In another terminal, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
