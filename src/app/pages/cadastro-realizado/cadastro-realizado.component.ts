@@ -20,11 +20,13 @@ export class CadastroRealizadoComponent implements OnInit {
 
   }
 
+  
   ngOnInit(): void {
+    //Obtendo o valor do formulário(se não tiver sido feito, o valor é null)
     this.formService.currentFormData.subscribe(formData => (this.formData = formData));
+    //Obtendo as perguntas do formulário, 
+    //que foram salvas logo depois de terem sido obtidas para a construção dele
     this.formQuestions = this.formService.formQuestions; 
-    console.log(this.formData)
-    console.log(this.formQuestions)
   }
 
 }

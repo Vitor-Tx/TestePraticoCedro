@@ -44,18 +44,6 @@ span {
     height: 3.5rem;
 }
 
-.bt-b {
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-width: 2px !important;
-}
-
-.bt-s {
-    background-color: rgb(71, 211, 58);
-    color: white;
-    font-weight: bold;
-}
-
 .mat-button:disabled {
     background-color: var(--tertiary-color) !important;
     color: white;

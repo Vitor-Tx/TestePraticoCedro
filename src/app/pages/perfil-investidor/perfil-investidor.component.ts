@@ -15,10 +15,15 @@ export class PerfilInvestidorComponent implements OnInit {
     private formService : FormService, 
     private router: Router,) { }
 
+  //verifica se está carregando
   isLoading = false;
+
+  //variável que obtém as perguntas e opções para a construção do formulário
   formResponse: Form;
   investorForm: FormGroup;
   disableBtn = true;
+
+  //lista de opções da pergunta 4, que podiam ser inseridas normalmente
   familiaridades = ['Nunca operei', 
   'Opero pouco e não tenho familiaridade', 
   'Opero eventualmente e conheço os riscos associados', 
@@ -30,6 +35,8 @@ export class PerfilInvestidorComponent implements OnInit {
 
   }
 
+  //função para construção do formulário. Aqui ela obtém a resposta da 
+  //simulação de "api", que contém os dados necessários para a construção.
   async buildForm(){
     let group = {}
     this.isLoading = true;
@@ -43,10 +50,6 @@ export class PerfilInvestidorComponent implements OnInit {
       return;
     }
     
-    this.isLoading = false;
-
-    
-    
     for(let r of this.formResponse.radios){
       group[r.id] = this.formbuilder.control('', Validators.required)
     }
@@ -58,9 +61,13 @@ export class PerfilInvestidorComponent implements OnInit {
     
     this.investorForm = this.formbuilder.group(group);
 
+    this.isLoading = false;
+
   }
 
 
+  //Ao enviar o formulário, as respostas ficam salvas no serviço FormService,
+  //e a partir dele a página #4 pode obtê-las e informá-las ao usuário.
   onSubmit(): void{
 
     if (this.investorForm.invalid) {

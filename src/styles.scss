@@ -40,6 +40,19 @@ body {
     border-top: 2px dashed rgb(160, 158, 158);
 }
 
+.bt-b {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-width: 2px !important;
+}
+
+.bt-s {
+    background-color: rgb(71, 211, 58)!important;
+    color: white !important;
+    border: none !important;
+    font-weight: bold;
+}
+
 body {
     font-family: Poppins, Roboto, "Helvetica Neue", sans-serif;
 }

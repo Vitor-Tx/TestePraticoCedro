@@ -36,17 +36,17 @@
 
 
         <ng-container *ngFor="let r of formQuestions?.radios; let i=index">
-            <h5 class="mb-4">{{i+1}} - {{r.title}}</h5>
-            <p>Resposta: {{formData[r.id]}}</p>
+            <h5 class="mb-4 text-start">{{i+1}} - {{r.title}}</h5>
+            <p class="text-start">Resposta: {{formData[r.id]}}</p>
             <div class="middle-line"></div>
         </ng-container>
 
-        <h5>4 - Qual sua familiaridade com os tipos de investimentos abaixo?<br> Leve em consideração o valor aplicado nos ultimos 2 anos.</h5>
+        <h5 class="text-start">4 - Qual sua familiaridade com os tipos de investimentos abaixo?<br> Leve em consideração o valor aplicado nos ultimos 2 anos.</h5>
 
 
         <ng-container *ngFor="let s of formQuestions?.selects; let i=index;">
-            <h5 class="mb-4">{{i+1}} - {{s.title}}</h5>
-            <p>Resposta: {{formData[s.id]}}</p>
+            <h5 class="mb-4 text-start">{{i+1}} - {{s.title}}</h5>
+            <p class="text-start">Resposta: {{formData[s.id]}}</p>
             <div class="middle-line"></div>
         </ng-container>
 

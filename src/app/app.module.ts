@@ -12,7 +12,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +25,7 @@ import { TelaInicialComponent } from './pages/tela-inicial/tela-inicial.componen
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { PerfilInvestidorComponent } from './pages/perfil-investidor/perfil-investidor.component';
 import { CadastroRealizadoComponent } from './pages/cadastro-realizado/cadastro-realizado.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+
 
 /* Modules */
 

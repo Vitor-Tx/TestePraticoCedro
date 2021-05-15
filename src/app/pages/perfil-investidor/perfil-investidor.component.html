@@ -5,12 +5,11 @@
         <mat-spinner diameter="50" *ngIf="isLoading"></mat-spinner>
     </div>
 
-
     <ng-container *ngIf="!isLoading">
         <form [formGroup]="investorForm">
             <ng-container *ngFor="let r of formResponse?.radios; let i=index">
                 <div class="form-group">
-                    <h5 class="mb-4">{{i+1}} - {{r.title}}</h5>
+                    <h5 class="mb-4 text-start">{{i+1}} - {{r.title}}</h5>
                     <mat-radio-group aria-label="Selecione uma opção" [formControlName]="r.id">
                         <div class="row">
                             <div class="col-md-12 col-xl-4" *ngFor="let a of r.answers; let j=index">
@@ -24,13 +23,13 @@
                 <div class="middle-line"></div>
             </ng-container>
 
-            <h5>4 - Qual sua familiaridade com os tipos de investimentos abaixo?<br> Leve em consideração o valor aplicado nos ultimos 2 anos.</h5>
+            <h5 class="text-lg-start">4 - Qual sua familiaridade com os tipos de investimentos abaixo? Leve em consideração o valor aplicado nos ultimos 2 anos.</h5>
 
             <div class="row my-5">
                 <ng-container *ngFor="let s of formResponse?.selects; let i=index;">
                     <div class="col-sm-12 col-md-6">
                         <div class="form-group">
-                            <p [ngStyle]="{'color': investorForm.get(s.id).valid ? 'var(--secondary-color)' : 'var(--primary-color)'}">{{s.title}}</p>
+                            <p class="text-start" [ngStyle]="{'color': investorForm.get(s.id).valid ? 'var(--secondary-color)' : 'var(--primary-color)'}">{{s.title}}</p>
                             <mat-form-field>
                                 <mat-label>Selecione uma opção</mat-label>
                                 <mat-select [formControlName]="s.id">
@@ -45,9 +44,10 @@
             </div>
 
 
-            <div class="text-end">
-                <button mat-button class="btn bt-s " [disabled]="!investorForm.valid" (click)="onSubmit()">SALVAR</button>
+            <div class="text-md-end text-sm-center ">
+
                 <button mat-button class="btn bt-b" routerLink="/home" routerLinkActive="active">VOLTAR</button>
+                <button mat-button type="button" class="btn bt-s " [disabled]="!investorForm.valid" (click)="onSubmit()">SALVAR</button>
 
             </div>
 
